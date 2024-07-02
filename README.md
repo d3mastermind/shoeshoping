@@ -16,7 +16,7 @@ A simple shopping application that allows users to view a list of products, add 
 ![Products Screen](/products_screen.png)
 ![Order Successful Screen](/product_details_screen.png)
 ![Checkout Screen](/checkout_screen.png)
-![Order Successful Screen](/order_successful_screen.png)
+![Order Successful Screen](/order_successful_screen1.png)
 
 ## Setup Instructions
 
