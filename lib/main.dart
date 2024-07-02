@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/pages/home_page.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
