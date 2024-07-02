@@ -67,7 +67,7 @@ A simple shopping application that allows users to view a list of products, add 
 
 ## APK Download
 Download the APK from the following link:
-[Simple Shopping App APK](https://example.com/downloads/simple-shopping-app.apk)
+[Simple Shopping App APK](https://github.com/d3mastermind/shoeshoping/blob/e934bfe958af792aaa30091c3334c900c9ab6152/apkfile/app-arm64-v8a-release.apk)
 
 
 ## No Third-party Dependencies
@@ -76,13 +76,7 @@ This application is built using only the native functionalities and components o
 ## Contribution
 Feel free to fork this repository and contribute by submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-For any questions or suggestions, please open an issue or contact me at [your-email@example.com](mailto:your-email@example.com).
-
----
 
 Thank you for checking out my Simple Shopping App!
 >>>>>>> origin/main
