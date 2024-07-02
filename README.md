@@ -18,6 +18,10 @@ A simple shopping application that allows users to view a list of products, add 
 ![Checkout Screen](/checkout_screen.png)
 ![Order Successful Screen](/order_successful_screen.png)
 
+## Demonstration
+View a virtualized demonstration of the app on Appetize.io:
+[Simple Shopping App on Appetize.io](https://appetize.io/app/pcdovislm6xotld3kfxxrursbe?device=pixel7&osVersion=13.0)
+
 ## Setup Instructions
 
 ### Prerequisites
