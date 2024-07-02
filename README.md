@@ -1,21 +1,5 @@
 <<<<<<< HEAD
-# shopping_app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
 # Simple Shopping App
 
 ## Overview
@@ -23,7 +7,8 @@ A simple shopping application that allows users to view a list of products, add 
 
 ## Features
 - **Bottom Navigation Bar**: Navigate between Products and Checkout screens.
-- **Products Screen**: Display a static list of products with an option to add them to the checkout.
+- **Products Screen**: Display a static list of products.
+- **Product Details Screen**: Display a detailed view of selected product with an option to add them to the checkout.
 - **Checkout Screen**: View products added for checkout with the ability to remove items.
 - **Order Successful Screen**: Confirmation screen displayed after completing an order.
 
