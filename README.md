@@ -11,8 +11,9 @@ A simple shopping application that allows users to view a list of products, add 
 
 ## Screenshots
 ![Products Screen](/products_screen.png)
-![Checkout Screen](screenshots/checkout_screen.png)
-![Order Successful Screen](screenshots/order_successful_screen.png)
+![Order Successful Screen](/product_details_screen.png)
+![Checkout Screen](/checkout_screen.png)
+![Order Successful Screen](/order_successful_screen.png)
 
 ## Setup Instructions
 
@@ -23,8 +24,8 @@ A simple shopping application that allows users to view a list of products, add 
 ### Android
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/simple-shopping-app.git
-    cd simple-shopping-app
+    git clone https://github.com/d3mastermind/shoeshoping
+    cd shoeshoping
     ```
 
 2. **Open the project in Android Studio**:
@@ -36,8 +37,8 @@ A simple shopping application that allows users to view a list of products, add 
 ### iOS
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/simple-shopping-app.git
-    cd simple-shopping-app
+    git clone https://github.com/d3mastermind/shoeshoping
+    cd shoeshopping
     ```
 
 2. **Open the project in Xcode**:
