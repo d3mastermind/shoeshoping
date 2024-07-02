@@ -1,0 +1,1 @@
+ /home/mastermind/Desktop/Flutterproject/shopping_app/.dart_tool/flutter_build/5df65e81be2e7d8ae0413c3d361eca11/native_assets.yaml: 
