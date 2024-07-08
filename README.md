@@ -56,7 +56,7 @@ View a virtualized demonstration of the app on Appetize.io:
 
 ## APK Download
 Download the APK from the following link:
-[Simple Shopping App APK](https://github.com/d3mastermind/shoeshoping/blob/e934bfe958af792aaa30091c3334c900c9ab6152/apkfile/app-release.apk)
+[Simple Shopping App APK](https://github.com/d3mastermind/shoeshoping/tree/f37297c960c13777457ab8c7a66e5a928cb00253/apkfile)
 
 
 ## No Third-party Dependencies
