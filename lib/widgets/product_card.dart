@@ -32,11 +32,14 @@ class ProductCard extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           Center(
-            child: Image.asset(
-              imageUrl,
-              height: 180,
+              child: FadeInImage(
+            placeholder: const AssetImage(
+              'assets/images/placeholders/shoe_placeholder.png',
             ),
-          ),
+            image: NetworkImage(
+              'https://api.timbu.cloud/images/$imageUrl',
+            ),
+          )),
         ],
       ),
     );

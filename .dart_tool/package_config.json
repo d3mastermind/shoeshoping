@@ -80,6 +80,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "flutter_dotenv",
+      "rootUri": "file:///home/mastermind/.pub-cache/hosted/pub.dev/flutter_dotenv-5.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///home/mastermind/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
@@ -338,7 +344,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-07-02T21:16:14.736659Z",
+  "generated": "2024-07-08T02:19:31.730809Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

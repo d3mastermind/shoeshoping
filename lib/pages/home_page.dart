@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+
 import "package:shopping_app/pages/cart_page.dart";
 
 import "package:shopping_app/pages/product_list.dart";
@@ -12,6 +13,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Map<String, Object>> selectedProductList = [];
+  void currentPageController(int num) {
+    setState(() {
+      currentpage = num;
+    });
+
+    print('Page Reset');
+  }
 
   int currentpage = 0;
   @override
@@ -22,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       ),
       CartPage(
         selectedProductList: selectedProductList,
-        currentpage: currentpage,
+        pageReset: currentPageController,
       ),
     ];
     return Scaffold(
@@ -35,9 +43,7 @@ class _HomePageState extends State<HomePage> {
         unselectedFontSize: 0,
         currentIndex: currentpage,
         onTap: (value) {
-          setState(() {
-            currentpage = value;
-          });
+          currentPageController(value);
         },
         items: const [
           BottomNavigationBarItem(
