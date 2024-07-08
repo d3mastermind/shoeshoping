@@ -20,7 +20,7 @@ A simple shopping application that allows users to view a list of products, add 
 
 ## Demonstration
 View a virtualized demonstration of the app on Appetize.io:
-[Simple Shopping App on Appetize.io](https://appetize.io/app/pcdovislm6xotld3kfxxrursbe?device=pixel7&osVersion=13.0)
+[Simple Shopping App on Appetize.io](https://appetize.io/app/b_cqiw7kd3sllwyihgcsjf3npyiy?device=pixel7&osVersion=13.0)
 
 ## Setup Instructions
 
@@ -56,7 +56,7 @@ View a virtualized demonstration of the app on Appetize.io:
 
 ## APK Download
 Download the APK from the following link:
-[Simple Shopping App APK](https://github.com/d3mastermind/shoeshoping/blob/e934bfe958af792aaa30091c3334c900c9ab6152/apkfile/app-arm64-v8a-release.apk)
+[Simple Shopping App APK](https://github.com/d3mastermind/shoeshoping/blob/e934bfe958af792aaa30091c3334c900c9ab6152/apkfile/app-release.apk)
 
 
 ## No Third-party Dependencies

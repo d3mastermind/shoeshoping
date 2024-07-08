@@ -22,12 +22,14 @@ class _ProductListState extends State<ProductList> {
     "Abiba",
   ];
   String? error;
+  bool isloading = true;
   List<dynamic> products = [];
   //late List<Map<String, dynamic>> rawProducts;
   int productCount = 0;
   late String selectedFilter;
 
-  void getProductDetails() async {
+  Future getProductDetails() async {
+    isloading = true;
     await dotenv.load(fileName: ".env.secrets");
     String appid = dotenv.env['APP_ID']!;
     String apikey = dotenv.env['API_KEY']!;
@@ -43,13 +45,17 @@ class _ProductListState extends State<ProductList> {
         productCount = rawProducts["total"] as int;
         products = rawProducts["items"];
         error = null;
+        isloading = false;
       });
       //setState(() {});
     } catch (e) {
       setState(() {
         error = e.toString();
+        isloading = false;
       });
-    }
+    } //finally {
+
+    // }
   }
 
   @override
@@ -58,6 +64,7 @@ class _ProductListState extends State<ProductList> {
     selectedFilter = filters[0];
     getProductDetails();
     productCount = 0;
+    isloading;
     super.initState();
   }
 
@@ -72,7 +79,6 @@ class _ProductListState extends State<ProductList> {
 
   @override
   Widget build(BuildContext context) {
-    print('Build fn Called');
     return SafeArea(
       child: Column(
         children: [
@@ -122,7 +128,7 @@ class _ProductListState extends State<ProductList> {
                       ),
                       backgroundColor: selectedFilter == filter
                           ? Theme.of(context).colorScheme.primary
-                          : Color.fromARGB(255, 248, 234, 248),
+                          : const Color.fromARGB(255, 248, 234, 248),
                       label: Text(
                         filter,
                         style: const TextStyle(
@@ -138,74 +144,82 @@ class _ProductListState extends State<ProductList> {
               },
             ),
           ),
-          error != null
-              ? Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Icon(
-                      color: Theme.of(context).colorScheme.primary,
-                      Icons.error,
-                      size: 200,
-                    ),
-                    Text(
-                      'An Error Occured',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    TextButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Theme.of(context).colorScheme.primary),
-                          minimumSize: const MaterialStatePropertyAll(
-                            Size(300, 50),
-                          ),
+          isloading
+              ? const SizedBox(
+                  height: 300,
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                )
+              : productCount == 0
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(
+                          color: Theme.of(context).colorScheme.primary,
+                          Icons.error,
+                          size: 200,
                         ),
-                        onPressed: () {
-                          getProductDetails();
-                          //getProductDetails();
-                        },
-                        child: Text(
-                          'Try Again',
+                        Text(
+                          'An Error Occured',
                           style: Theme.of(context).textTheme.titleMedium,
-                        ))
-                  ],
-                )
-              : Expanded(
-                  child: ListView.builder(
-                      itemCount: productCount,
-                      itemBuilder: (context, index) {
-                        final product = products[index];
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return ProductDetailsPage(
-                                      product: product,
-                                      //nAddToCart: ,
-                                      selectedProductList:
-                                          widget.selectedProductList,
-                                    );
-                                  },
-                                ),
-                              );
-                            },
-                            child: ProductCard(
-                              title: product['name'] as String,
-                              price: product['current_price'][0]['NGN'][0]
-                                  as double,
-                              imageUrl: (product['photos'] as List)[0]['url']
-                                  as String,
-                              bgColor: index.isEven
-                                  ? const Color.fromRGBO(255, 220, 255, 1)
-                                  : Theme.of(context).colorScheme.primary,
+                        ),
+                        TextButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                  Theme.of(context).colorScheme.primary),
+                              minimumSize: const MaterialStatePropertyAll(
+                                Size(300, 50),
+                              ),
                             ),
-                          ),
-                        );
-                      }),
-                )
+                            onPressed: () {
+                              getProductDetails();
+                              setState(() {});
+                              //getProductDetails();
+                            },
+                            child: Text(
+                              'Try Again',
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ))
+                      ],
+                    )
+                  : Expanded(
+                      child: ListView.builder(
+                          itemCount: productCount,
+                          itemBuilder: (context, index) {
+                            final product = products[index];
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 20, horizontal: 20),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return ProductDetailsPage(
+                                          product: product,
+                                          //nAddToCart: ,
+                                          selectedProductList:
+                                              widget.selectedProductList,
+                                        );
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: ProductCard(
+                                  title: product['name'] as String,
+                                  price: product['current_price'][0]['NGN'][0]
+                                      as double,
+                                  imageUrl: (product['photos'] as List)[0]
+                                      ['url'] as String,
+                                  bgColor: index.isEven
+                                      ? const Color.fromRGBO(255, 220, 255, 1)
+                                      : Theme.of(context).colorScheme.primary,
+                                ),
+                              ),
+                            );
+                          }),
+                    )
         ],
       ),
     );

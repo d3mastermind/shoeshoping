@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shopping_app/pages/order_success_page.dart';
-import 'package:shopping_app/widgets/cart_page_with_product.dart';
+import 'package:shopping_app/pages/cart_page_with_product.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage(
