@@ -3,7 +3,7 @@
 # Simple Shopping App
 
 ## Overview
-A simple shopping application that allows users to view a list of products, add products to a checkout list, and navigate to an order successful screen. The application is built using only native components and functionalities without any third-party dependencies.
+A simple shopping application that allows users to view a list of products (fetched from an API), add products to a checkout list, and navigate to an order successful screen. The application is built using only native components and functionalities without any third-party dependencies.
 
 ## Features
 - **Bottom Navigation Bar**: Navigate between Products and Checkout screens.
@@ -58,9 +58,6 @@ View a virtualized demonstration of the app on Appetize.io:
 Download the APK from the following link:
 [Simple Shopping App APK](https://github.com/d3mastermind/shoeshoping/tree/f37297c960c13777457ab8c7a66e5a928cb00253/apkfile)
 
-
-## No Third-party Dependencies
-This application is built using only the native functionalities and components of the chosen mobile platform/framework, ensuring no third-party packages, plugins, or libraries are used.
 
 ## Contribution
 Feel free to fork this repository and contribute by submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
